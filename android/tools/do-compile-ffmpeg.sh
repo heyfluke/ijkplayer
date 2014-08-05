@@ -34,19 +34,19 @@ fi
 # FF_NDK_REL=$(grep -o "^r[0-9]*" $ANDROID_NDK/RELEASE.TXT | grep -o "[0-9]*")
 FF_NDK_REL=$(grep -o "^r[0-9]*" $ANDROID_NDK/RELEASE.TXT | cut -c 2-)
 case "$FF_NDK_REL" in
-    10)
+    9)
         # we don't use 4.4.3 because it doesn't handle threads correctly.
         if test -d ${ANDROID_NDK}/toolchains/arm-linux-androideabi-${TOOLCHAIN_VER}
         # if gcc 4.8 is present, it's there for all the archs (x86, mips, arm)
         then
             echo "NDKr$FF_NDK_REL detected"
         else
-            echo "You need the NDKr10 or later"
+            echo "You need the NDKr9 or later"
             exit 1
         fi
     ;;
     7|8|*)
-        echo "You need the NDKr10 or later"
+        echo "You need the NDKr9 or later"
         exit 1
     ;;
 esac
