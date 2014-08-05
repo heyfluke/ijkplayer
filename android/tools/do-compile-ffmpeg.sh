@@ -25,7 +25,8 @@ if [ -z "$FF_ARCH" ]; then
 fi
 
 TOOLCHAIN_VER=4.8
-if [ `uname` == "Darwin" ]; then
+if [ `uname` = "Darwin" ]; then
+    echo ">> is Darwin"
     TOOLCHAIN_VER=4.8
 fi
 
