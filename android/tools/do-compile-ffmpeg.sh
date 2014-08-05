@@ -24,7 +24,7 @@ if [ -z "$FF_ARCH" ]; then
     exit 1
 fi
 
-TOOLCHAIN_VER=4.9
+TOOLCHAIN_VER=4.8
 if [ `uname` == "Darwin" ]; then
     TOOLCHAIN_VER=4.8
 fi
@@ -52,8 +52,8 @@ case "$FF_NDK_REL" in
 esac
 
 FF_BUILD_ROOT=`pwd`
-FF_ANDROID_PLATFORM=android-L
-FF_GCC_VER=4.9
+FF_ANDROID_PLATFORM=android-18
+FF_GCC_VER=4.8
 
 
 
